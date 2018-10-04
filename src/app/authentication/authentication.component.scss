@@ -1,0 +1,61 @@
+@import "../../styles/variables";
+
+.auth-container {
+  height: 100%;
+  background: linear-gradient(to bottom, $color-dodger-blue 50%, #E6E1E5 50%);
+  @extend %flex-base;
+  .auth-card {
+    position: absolute;
+    background: white;
+    height: 60vh;
+    width: 70vh;
+    -moz-box-shadow: 0px 0px 20px rgb(93, 91, 91);
+    -webkit-box-shadow: 0px 0px 20px rgb(93, 91, 91);
+    box-shadow: 0px 0px 20px rgb(93, 91, 91);
+    @media only screen and (max-width: 750px) {
+      width: 45vh;
+    }
+    .header {
+      height: 30%;
+      padding: 3vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .icon {
+        .account_circle {
+          color: $color-dodger-blue;
+          font-size: 8vh;
+        }
+      }
+      .login-text {
+        .text {
+          font-weight: 100;
+          font-size: 4.5vh;
+          margin: 0;
+        }
+      }
+    }
+    .body {
+      height: 60%;
+      .form {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        @extend %flex-base;
+        .main-inputs {
+          width: 60%;
+          display: flex;
+          flex-direction: column;
+        }
+        .submit {
+          margin-bottom: 6vh;
+          background: $color-dodger-blue;
+          color: $color-white;
+        }
+      }
+    }
+
+  }
+}
