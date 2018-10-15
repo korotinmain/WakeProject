@@ -1,1 +1,44 @@
-<app-authentication></app-authentication>
+<header>
+    <mat-toolbar
+            class="toolbar-container"
+            color="primary"
+            fxLayout
+            fxLayoutAlign="space-between center">
+        <div routerLink="/"
+             fxLayoutAlign="flex-start center"
+             class="toolbar__logo">
+            <img class="logo" src="../assets/wake-spot.png" alt="wake-spot">
+        </div>
+        <div class="toolbar__menu-block"
+             fxHide.xs fxHide.sm
+             fxLayoutGap="3vh"
+             fxLayoutAlign="flex-end">
+            <a routerLink="/login">Login</a>
+            <a routerLink="/feed">Feed</a>
+        </div>
+        <div class="icon-button toolbar__toggle-menu"
+             fxHide.lg
+             fxHide.md
+             fxHide.xl
+            fxLayoutAlign="flex-end center">
+            <button (click)="isOpenedMenu = !isOpenedMenu">
+                <i class="material-icons">menu</i>
+            </button>
+        </div>
+    </mat-toolbar>
+</header>
+<div class="right-menu"
+     [class.opened]="isOpenedMenu">
+    <div class="menu-container">
+        <div class="menu-header">
+            <p>Menu</p>
+        </div>
+        <div class="menu-links">
+            <a routerLink="/login" routerLinkActive="active">Login</a>
+            <a routerLink="/feed" routerLinkActive="active">Feed</a>
+        </div>
+    </div>
+</div>
+<main>
+    <router-outlet></router-outlet>
+</main>
