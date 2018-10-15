@@ -20,7 +20,7 @@
              fxHide.lg
              fxHide.md
              fxHide.xl
-            fxLayoutAlign="flex-end center">
+             fxLayoutAlign="flex-end center">
             <button (click)="isOpenedMenu = !isOpenedMenu">
                 <i class="material-icons">menu</i>
             </button>
@@ -34,8 +34,12 @@
             <p>Menu</p>
         </div>
         <div class="menu-links">
-            <a routerLink="/login" routerLinkActive="active">Login</a>
-            <a routerLink="/feed" routerLinkActive="active">Feed</a>
+            <a routerLink="/login"
+               routerLinkActive="active"
+               (click)="isOpenedMenu = false">Login</a>
+            <a routerLink="/feed"
+               routerLinkActive="active"
+               (click)="isOpenedMenu = false">Feed</a>
         </div>
     </div>
 </div>
